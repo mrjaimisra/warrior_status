@@ -1,18 +1,28 @@
 {
   "RSpec": {
     "coverage": {
-      "/Users/cminnerath/code/projects/warrior_status/app/controllers/application_controller.rb": [
-        0,
-        0,
-        0,
-        0,
-        0
-      ],
       "/Users/cminnerath/code/projects/warrior_status/app/helpers/application_helper.rb": [
-        0,
-        0
+        1,
+        null
+      ],
+      "/Users/cminnerath/code/projects/warrior_status/app/helpers/main_helper.rb": [
+        1,
+        null
+      ],
+      "/Users/cminnerath/code/projects/warrior_status/app/controllers/main_controller.rb": [
+        1,
+        1,
+        null,
+        null
+      ],
+      "/Users/cminnerath/code/projects/warrior_status/app/controllers/application_controller.rb": [
+        1,
+        null,
+        null,
+        1,
+        null
       ]
     },
-    "timestamp": 1450411943
+    "timestamp": 1450576031
   }
 }
