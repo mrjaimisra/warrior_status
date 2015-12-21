@@ -1,61 +1,66 @@
 {
   "RSpec": {
     "coverage": {
-      "/Users/mrjaimisra/Projects/warrior_status/app/helpers/application_helper.rb": [
+      "/Users/cminnerath/code/projects/warrior_status/app/helpers/application_helper.rb": [
         1,
         null
       ],
-      "/Users/mrjaimisra/Projects/warrior_status/app/helpers/main_helper.rb": [
+      "/Users/cminnerath/code/projects/warrior_status/app/helpers/main_helper.rb": [
         1,
         null
       ],
-      "/Users/mrjaimisra/Projects/warrior_status/app/controllers/main_controller.rb": [
+      "/Users/cminnerath/code/projects/warrior_status/app/controllers/main_controller.rb": [
         1,
         1,
         null,
         null
       ],
-      "/Users/mrjaimisra/Projects/warrior_status/app/controllers/application_controller.rb": [
+      "/Users/cminnerath/code/projects/warrior_status/app/controllers/application_controller.rb": [
         1,
         null,
         null,
         1,
         null,
         1,
+        null,
+        1,
+        4,
+        null,
+        null,
+        1,
+        0,
+        null,
+        null
+      ],
+      "/Users/cminnerath/code/projects/warrior_status/app/models/admin.rb": [
+        1,
+        1,
+        null,
+        null,
+        null
+      ],
+      "/Users/cminnerath/code/projects/warrior_status/app/controllers/sessions_controller.rb": [
+        1,
+        1,
+        null,
         null,
         1,
         2,
-        null,
-        null,
-        1,
-        0,
-        null,
-        null
-      ],
-      "/Users/mrjaimisra/Projects/warrior_status/app/models/admin.rb": [
-        1,
-        1,
-        null,
-        null,
-        null
-      ],
-      "/Users/mrjaimisra/Projects/warrior_status/app/controllers/sessions_controller.rb": [
-        1,
-        1,
-        null,
-        null,
-        1,
-        1,
-        1,
-        1,
-        1,
+        2,
+        2,
+        2,
         null,
         0,
         null,
         null,
+        null,
+        1,
+        1,
+        1,
+        null,
         null
       ],
-      "/Users/mrjaimisra/Projects/warrior_status/app/controllers/admin_controller.rb": [
+      "/Users/cminnerath/code/projects/warrior_status/app/controllers/admin_controller.rb": [
         0,
         0,
         0,
@@ -65,6 +70,6 @@
         0
       ]
     },
-    "timestamp": 1450664188
+    "timestamp": 1450666444
   }
 }
