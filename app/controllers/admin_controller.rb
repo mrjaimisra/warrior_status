@@ -1,4 +1,7 @@
 class AdminController < ApplicationController
-  def show
+  before_action :authorize!
+
+  }}}def show
   end
+
 end

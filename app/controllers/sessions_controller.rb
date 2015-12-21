@@ -6,7 +6,7 @@ class SessionsController < ApplicationController
     @admin = Admin.find_by(username: params[:session][:username])
       if @admin && @admin.authenticate(params[:session][:password])
         session[:admin_id] = @admin.id
-        redirect_to dashboard_path
+        redirect_to root_path
       else
         render :new
       end
