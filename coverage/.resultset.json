@@ -21,8 +21,37 @@
         null,
         1,
         null
+      ],
+      "/Users/cminnerath/code/projects/warrior_status/app/models/admin.rb": [
+        1,
+        1,
+        null,
+        null,
+        null
+      ],
+      "/Users/cminnerath/code/projects/warrior_status/app/controllers/sessions_controller.rb": [
+        1,
+        1,
+        null,
+        null,
+        1,
+        1,
+        1,
+        1,
+        1,
+        null,
+        0,
+        null,
+        null,
+        null
+      ],
+      "/Users/cminnerath/code/projects/warrior_status/app/controllers/admin_controller.rb": [
+        1,
+        1,
+        null,
+        null
       ]
     },
-    "timestamp": 1450576031
+    "timestamp": 1450657853
   }
 }
