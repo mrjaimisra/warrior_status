@@ -1,6 +1,3 @@
-require 'simplecov'
-SimpleCov.start 'rails'
-
 require 'capybara/rspec'
 require 'helpers/login_helper'
 

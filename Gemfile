@@ -40,7 +40,7 @@ group :development, :test do
   gem 'database_cleaner'
   gem 'capybara'
   gem 'launchy'
-  gem 'simplecov'
+  # gem 'simplecov'
   gem 'pry-rails'
   gem 'selenium-webdriver'
 end
