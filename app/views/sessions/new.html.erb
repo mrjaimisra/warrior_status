@@ -1,0 +1,19 @@
+<div class="container">
+  <%= form_for(:session, url: admin_path) do |f| %>
+  <div class="row">
+    <div class="input-field col s12">
+      <%= f.label :username %>
+      <%= f.text_field :username%>
+    </div>
+  </div>
+  <div class="row">
+    <div class="input-field col s12">
+      <%= f.label :password %>
+      <%= f.password_field :password%>
+    </div>
+  </div>
+  <div class="row">
+    <%= f.submit "Login" %>
+  </div>
+  <% end %>
+</div>
