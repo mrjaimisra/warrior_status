@@ -50,46 +50,45 @@ nav ul a {
 /* About */
 
 .about-image {
-  border-radius: 5px;
-  margin: 8px 0;
-  padding-right: 10px;
+  border-radius: 2px;
+  margin-top: 18px;
   max-width: 100%;
-  max-height: 100%;
+}
+
+.about-left-image, .about-right-image {
+  max-height: 540px;
+  overflow: hidden;
+}
+
+.card .card-content {
+  font-family: 'Alegreya Sans', sans-serif;
+  font-size: 16px;
+}
+
+.card .card-content .card-title {
+  text-align: center;
+  font-size: 18px;
+}
+
+.about-tagline {
+  font-size: 16px;
+}
+
+.about-title {
+  color: #6CF3E6;
+  font-size: 18px;
 }
 
 .about-highlights {
   color: #6CF3E6;
 }
 
-.about-tagline {
-  font-size: 22px;
-}
-
-#warrior-status-about {
-  display: inline;
-}
-
-.card {
-  margin-left: 8px;
-  border-radius: 5px;
-}
-
-.card .card-content {
-  font-family: 'Alegreya Sans', sans-serif;
-  font-size: 19.5px;
-}
-
-.card .card-content .card-title {
-  text-align: center;
-  font-size: 30px;
-}
-
 /* Categories */
 
 .store-categories {
   font-family: 'Alegreya Sans', sans-serif;
-  font-size: 18px;
-  padding-left: 18px;
+  font-size: 12px;
+  padding-left: 12px;
 }
 
 .store-title {
