@@ -5,4 +5,6 @@ Rails.application.routes.draw do
   post "/admin",     to: "sessions#create"
   get  "/dashboard", to: "admin#show", as: :dashboard
   delete "/logout",  to: "sessions#destroy"
+
+  get "/about",      to: "about#index"
 end
