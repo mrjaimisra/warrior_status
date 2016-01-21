@@ -15,6 +15,7 @@
  */
 @import "materialize";
 @import url(https://fonts.googleapis.com/css?family=Monsieur+La+Doulaise);
+@import url(https://fonts.googleapis.com/css?family=Alegreya+Sans);
 
 
 .big-main-image {
@@ -24,7 +25,7 @@
 /* Navigation */
 
 nav {
-  background-color: #36454F;
+  background-color: #2C172B;
 }
 
 nav .brand-logo {
@@ -38,7 +39,48 @@ nav .brand-logo {
 
 nav ul a {
   color: #6CF3E6;
+  font-family: 'Alegreya Sans', sans-serif;
+  font-size: 20px;
+  text-transform: uppercase;
   &:hover {
     color: #941F88;
   }
+}
+
+/* About */
+
+.about-image {
+  border-radius: 5px;
+  margin: 8px 0;
+  padding-right: 10px;
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.about-highlights {
+  color: #6CF3E6;
+}
+
+.about-tagline {
+  font-size: 22px;
+  // color: #6CF3E6;
+}
+
+#warrior-status-about {
+  display: inline;
+}
+
+.card {
+  margin-left: 8px;
+  border-radius: 5px;
+}
+
+.card .card-content {
+  font-family: 'Alegreya Sans', sans-serif;
+  font-size: 19.5px;
+}
+
+.card .card-content .card-title {
+  text-align: center;
+  font-size: 30px;
 }
