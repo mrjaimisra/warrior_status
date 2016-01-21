@@ -20,13 +20,15 @@
 /* Navigation */
 
 nav {
-  background-color: #2C172B;
+  background-color: #607D8B;
+  line-height: 120px;
+  height: 120px;
 }
 
 nav .brand-logo {
   color: #6CF3E6;
   font-family: 'Monsieur La Doulaise', cursive;
-  font-size: 50px;
+  font-size: 100px;
   &:hover {
     color: #941F88;
   }
@@ -35,11 +37,29 @@ nav .brand-logo {
 nav ul a {
   color: #6CF3E6;
   font-family: 'Alegreya Sans', sans-serif;
-  font-size: 20px;
+  font-size: 24px;
   text-transform: uppercase;
   &:hover {
     color: #941F88;
   }
+}
+
+nav ul li:hover {
+  background-color: rgba(96, 125, 139, 0.2)
+}
+
+body > nav > div > a.button-collapse > i {
+  color: #6CF3E6;
+  font-size: 120px;
+  line-height: 120px;
+}
+
+#mobile-nav {
+  background-color: #B6EFE9;
+}
+
+#mobile-nav > li > a {
+  font-size: 50px;
 }
 
 /* About */
