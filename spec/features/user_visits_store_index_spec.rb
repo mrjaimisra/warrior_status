@@ -5,7 +5,10 @@ RSpec.feature "User can navigate to landing page", type: :feature do
 
   scenario "successfully" do
     visit root_path
-    click_on "Store"
+
+    within('#nav-mobile') do
+      click_on "Store"
+    end
 
     expect(current_path).to eq(store_path)
     expect(page).to have_content(item.title)
