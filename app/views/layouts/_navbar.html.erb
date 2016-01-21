@@ -1,17 +1,22 @@
-<nav>
-  <div class="nav-wrapper">
+<div class="container">
+  <nav>
+    <div class="nav-wrapper">
 
-  <% if current_admin %>
-    <%= render partial: "layouts/control_panel" %>
-  <% end %>
+    <% if current_admin %>
+      <%= render partial: "layouts/control_panel" %>
+    <% end %>
 
-    <%= link_to "Warrior Status", root_path, class: "brand-logo center" %>
+      <%= link_to "Warrior Status", root_path, class: "brand-logo center" %>
 
-    <ul id="nav-mobile" class="left hide-on-med-and-down">
-      <li>
-        <%= link_to "About", about_path %>
-      </li>
-    </ul>
-  </div>
+      <ul id="nav-mobile" class="left hide-on-med-and-down">
+        <li>
+          <%= link_to "About", about_path %>
+        </li>
+        <li>
+          <%= link_to "Store", store_path %>
+        </li>
+      </ul>
+    </div>
 
-</nav>
+  </nav>
+</div>
