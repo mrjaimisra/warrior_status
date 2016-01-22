@@ -16,6 +16,8 @@
 //= require turbolinks
 //= require_tree .
 
-$().ready(function () {
+
+$(document).ready(function () {
   $(".button-collapse").sideNav();
+  // $('nav').pushpin({ top: $('#push').offset().top });
 });

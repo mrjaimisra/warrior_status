@@ -22,32 +22,36 @@
 /* Navigation */
 
 nav {
-  background-color: #607D8B;
-  line-height: 120px;
-  height: 120px;
+  background-color: rgba(52, 70, 80, 0.9);
+  line-height: 100px;
+  height: 100px;
+}
+
+#push {
+  height: 100px;
 }
 
 nav .brand-logo {
   color: #6CF3E6;
   font-family: 'Monsieur La Doulaise', cursive;
-  font-size: 100px;
-  &:hover {
-    color: #941F88;
-  }
+  font-size: 80px;
+  text-shadow: 1px 2px #54124C;
 }
 
 nav ul a {
   color: #6CF3E6;
   font-family: 'Economica', sans-serif;
   font-size: 29px;
+  text-shadow: 1px 2px #54124C;
   text-transform: uppercase;
   &:hover {
     color: #941F88;
+    text-shadow: 0.5px 0.5px black;
   }
 }
 
 nav ul li:hover {
-  background-color: rgba(255, 255, 255, 0.2)
+  background-color: rgb(52, 70, 80);
 }
 
 body > nav > div > a.button-collapse > i {
@@ -78,7 +82,8 @@ body > nav > div > a.button-collapse > i {
 }
 
 .card {
-  background-color: rgba(96, 125, 139, 0.83)
+  background-color: rgba(96, 125, 139, 0.83);
+  z-index: -1;
 }
 
 .card .card-content {
