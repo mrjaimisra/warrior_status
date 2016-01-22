@@ -9,7 +9,6 @@ RSpec.feature "Admin can log in", type: :feature do
 
   scenario "successfully" do
     expect(current_path).to eq root_path
-    expect(page).to have_content "Edit Profile"
     expect(page).to have_content "Logout"
   end
 end
