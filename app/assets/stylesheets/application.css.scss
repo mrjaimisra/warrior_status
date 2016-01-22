@@ -16,6 +16,7 @@
 @import "materialize";
 @import url(https://fonts.googleapis.com/css?family=Monsieur+La+Doulaise);
 @import url(https://fonts.googleapis.com/css?family=Alegreya+Sans);
+@import url(https://fonts.googleapis.com/css?family=Dancing+Script:700);
 
 /* Navigation */
 
@@ -36,7 +37,7 @@ nav .brand-logo {
 
 nav ul a {
   color: #6CF3E6;
-  font-family: 'Alegreya Sans', sans-serif;
+  font-family: 'Dancing Script', cursive;
   font-size: 24px;
   text-transform: uppercase;
   &:hover {
