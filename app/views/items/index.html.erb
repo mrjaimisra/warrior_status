@@ -1,8 +1,12 @@
 <div class="container">
+
+    <%= link_to "Add Item", new_item_path %>
+
     <% @items.map do |item| %>
     <div class="col s3">
       <p><%= item.title %></p>
     </div>
     <% end %>
-  </div>
+
+
 </div>
