@@ -1,12 +1,17 @@
 <div class="container">
 
-    <%= link_to "Add Item", new_item_path %>
+  <div class="row">
 
+    <div class="col s3 offset-s10">
+      <%= link_to "Add Item", new_item_path, class: "waves-effect waves-light btn black" %>
+    </div>
+  </div>
+
+  <div class="row">
     <% @items.map do |item| %>
-    <div class="col s3">
+    <div class="col s4">
       <p><%= item.title %></p>
     </div>
     <% end %>
-
-
+  </div>
 </div>
