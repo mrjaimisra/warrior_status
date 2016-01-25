@@ -5,7 +5,7 @@
     </div>
   </div>
 
-  <%= form_for :item do |f| %>
+  <%= form_for @item do |f| %>
   <div class="row">
     <div class="input-field col s12">
       <%= f.label      :title %>
@@ -28,20 +28,14 @@
   </div>
 
   <div class="row">
-    <div class="input-field col s12">
-      <%= f.label      :image %>
-      <%= f.text_field :image %>
-    </div>
-  </div>
-
-  <div class="row">
     <div class="input-field col s2">
-      <%= f.submit     "Add Item", class: "waves-effect waves-light btn black" %>
+      <%= f.submit     "Add Item",
+                        class: "waves-effect waves-light btn black" %>
     </div>
   <% end %>
     <div class="input-field col s2">
-      <%= link_to      "Cancel",
-                       store_path, class: "waves-effect waves-light btn black" %>
+      <%= link_to      "Cancel", store_path,
+                        class: "waves-effect waves-light btn black" %>
     </div>
   </div>
 </div>
