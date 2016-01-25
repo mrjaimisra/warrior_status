@@ -14,7 +14,6 @@ RSpec.feature "Admin can visit add item page", type: :feature do
     expect(page).to have_content("Title")
     expect(page).to have_content("Description")
     expect(page).to have_content("Price")
-    expect(page).to have_content("Image")
     expect(page).to have_button("Add Item")
 
     click_on "Cancel"
