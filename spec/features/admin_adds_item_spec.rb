@@ -1,12 +1,16 @@
 require 'rails_helper'
 
-RSpec.feature "Admin can add a new item", type: :feature do
+RSpec.feature "Admin can", type: :feature do
+  let!(:admin) { Admin.create(username: "Admin", password: "password") }
+
   before do
     login
   end
 
-  scenario "successfully" do
+  scenario "successfully add a new item" do
     visit new_item_path
+    expect(current_path).to eq(new_item_path)
+
     fill_in "Title",       with: "My First Item"
     fill_in "Description", with: "A great piece"
     fill_in "Price",       with: 8
@@ -19,7 +23,7 @@ RSpec.feature "Admin can add a new item", type: :feature do
     expect(page).to have_content("A great piece")
   end
 
-  scenario "unsuccessfully due to blank fields" do
+  scenario "not add a new item form fields are blank" do
     visit new_item_path
 
     click_on "Add Item"
@@ -31,13 +35,13 @@ RSpec.feature "Admin can add a new item", type: :feature do
     expect(page).to have_content("Item image can't be blank")
   end
 
-  scenario "unsuccessfully due to invalid entries" do
+  scenario "not add a new item if information is improperly formatted" do
     visit new_item_path
 
-    fill_in "Title",       with: "My First Item"
-    fill_in "Description", with: "A great piece"
-    fill_in "Price",       with: "eight"
-    attach_file "Item image",  File.expand_path('./app/assets/images/purple-parfletche-earrings.pdf')
+    fill_in "Title",          with: "My First Item"
+    fill_in "Description",    with: "A great piece"
+    fill_in "Price",          with: "eight"
+    attach_file "Item image", File.expand_path('./app/assets/images/purple-parfletche-earrings.pdf')
 
     click_on "Add Item"
 
@@ -45,6 +49,4 @@ RSpec.feature "Admin can add a new item", type: :feature do
     expect(page).to have_content("Price is not a number")
     expect(page).to have_content("Item image content type is invalid")
   end
-
-
 end

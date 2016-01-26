@@ -1,4 +1,6 @@
 class ItemsController < ApplicationController
+  before_action :authorize!, only: [ :new, :create ]
+
   def index
     @items = Item.all
   end
@@ -21,5 +23,4 @@ class ItemsController < ApplicationController
     def item_params
       params.require(:item).permit(:title, :description, :price, :item_image)
     end
-
 end
