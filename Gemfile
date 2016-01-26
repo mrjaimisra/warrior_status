@@ -33,6 +33,10 @@ gem 'bcrypt', '~> 3.1.7'
 
 gem 'materialize-sass'
 gem 'rails_12factor'
+gem 'carrierwave', github: 'carrierwaveuploader/carrierwave'
+gem 'fog-aws'
+gem 'figaro'
+gem 'mini_magick'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console

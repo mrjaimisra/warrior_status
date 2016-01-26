@@ -106,3 +106,14 @@ body > nav > div > a.button-collapse > i {
 #add-item-title {
   font-family: 'Economica', sans-serif;
 }
+
+/* Store Page */
+
+.item-container {
+  margin: 15px;
+  max-height: 200px;
+  max-width: 200px;
+  min-height: 200px;
+  min-width:  200px;
+  overflow: hidden;
+}
