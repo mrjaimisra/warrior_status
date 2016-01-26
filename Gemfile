@@ -33,9 +33,9 @@ gem 'bcrypt', '~> 3.1.7'
 
 gem 'materialize-sass'
 gem 'rails_12factor'
+gem 'figaro'
 gem 'fog-aws'
 gem 'carrierwave', github: 'carrierwaveuploader/carrierwave'
-gem 'figaro'
 gem 'mini_magick'
 
 group :development, :test do
