@@ -1,8 +1,7 @@
 language: ruby
 rvm:
-  - 2.2.2
-
+- 2.2.2
 script:
-  - bundle install
-  - bundle exec rake db:create db:schema:load
-  - bundle exec rspec
+- bundle install
+- bundle exec rake db:create db:schema:load
+- bundle exec rspec
