@@ -9,7 +9,7 @@
 
   <div class="row">
     <% @items.map do |item| %>
-    <div class="col s4">
+    <div class="col s4" style="background-image:url('<%= item.item_image.url(:medium) %>')">
       <p><%= item.title %></p>
       <p><%= item.description %></p>
       <p><%= item.price %></p>
