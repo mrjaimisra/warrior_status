@@ -9,6 +9,10 @@ class ItemsController < ApplicationController
     @item = Item.new
   end
 
+  def show
+    @item = Item.find(params[:id])
+  end
+
   def create
     @item = Item.new(item_params)
     if @item.save
@@ -21,6 +25,6 @@ class ItemsController < ApplicationController
   private
 
     def item_params
-      params.require(:item).permit(:title, :description, :price, :item_image)
+      params.require(:item).permit(:title, :description, :price, :item_image, :item_id, :id)
     end
 end

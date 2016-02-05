@@ -12,4 +12,8 @@ class ApplicationController < ActionController::Base
   def authorize!
     redirect_to root_path unless current_admin
   end
+
+  def cart
+    @cart ||= Cart.new(session[:cart])
+  end
 end
