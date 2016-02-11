@@ -50,6 +50,8 @@ group :development, :test do
   # gem 'simplecov'
   gem 'pry-rails'
   gem 'selenium-webdriver'
+  gem 'shoulda'
+  gem 'shoulda-matchers'
 end
 
 group :development do

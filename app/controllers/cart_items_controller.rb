@@ -11,4 +11,11 @@ class CartItemsController < ApplicationController
     @cart_items = cart.items
   end
 
+  def destroy
+    @item = Item.find(params[:item_id])
+    cart.remove_item(@item.id)
+    redirect_to cart_path
+    flash[:notice] = "Item removed from cart"
+  end
+
 end

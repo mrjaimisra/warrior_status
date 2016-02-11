@@ -45,4 +45,19 @@ RSpec.describe Cart, type: :model do
     end
   end
 
+  context "#destroy_item" do
+    it "deletes item form cart" do
+      cart = Cart.new(nil)
+
+      cart.add_item(item)
+      expect(cart.data).to eq({item.id.to_s => 1})
+
+      cart.add_item(item)
+      expect(cart.data).to eq({item.id.to_s => 2})
+
+      cart.remove_item(item.id)
+      expect(cart.data).to eq({})
+    end
+  end
+
 end
