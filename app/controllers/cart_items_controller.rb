@@ -18,4 +18,11 @@ class CartItemsController < ApplicationController
     flash[:notice] = "Item removed from cart"
   end
 
+  def update
+    @item = Item.find(params[:item_id])
+    cart.update_item(@item.id, params[:quantity])
+    redirect_to cart_path
+    flash[:notice] = "Your cart has been updated"
+  end
+
 end

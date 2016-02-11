@@ -21,4 +21,8 @@ class Cart
     data.delete(item_id.to_s)
   end
 
+  def update_item(item_id, quantity)
+    data[item_id.to_s] = quantity.to_i
+  end
+
 end

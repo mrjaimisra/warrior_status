@@ -7,6 +7,15 @@
     <tr>
       <td class ="title"> <%= i.title %>
       <td class ="quantity">Quantity: <%= i.quantity %>
+        <div class="input-field col s1">
+        <td class="text-center" id="update_quantity">
+          <%= form_tag cart_items_path, method: :put do %>
+          <%= hidden_field_tag :item_id, i.id %>
+          <%= number_field_tag 'quantity', i.quantity, within: 1...10 %>
+          <%= submit_tag "Update" %>
+        <% end %>
+        </td>
+        </div>
       <td class="Remove"><%= link_to "Remove", cart_items_path(item_id: i.id), method: :delete%></td>
     </tr>
   <% end %>
