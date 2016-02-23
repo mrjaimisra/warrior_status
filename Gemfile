@@ -52,6 +52,7 @@ group :development, :test do
   gem 'selenium-webdriver'
   gem 'shoulda'
   gem 'shoulda-matchers'
+  gem 'capybara-screenshot'
 end
 
 group :development do

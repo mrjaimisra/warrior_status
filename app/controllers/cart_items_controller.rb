@@ -23,6 +23,11 @@ class CartItemsController < ApplicationController
     cart.update_item(@item.id, params[:quantity])
     redirect_to cart_path
     flash[:notice] = "Your cart has been updated"
+    count
+  end
+
+  def count
+    cart.data.keys.count
   end
 
 end
