@@ -24,5 +24,4 @@ class Cart
   def update_item(item_id, quantity)
     data[item_id.to_s] = quantity.to_i
   end
-
 end
