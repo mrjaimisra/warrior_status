@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-RSpec.feature "User can remove item in cart", type: :feature do
+RSpec.feature "User can edit quantity of item in cart", type: :feature do
   let!(:item) { Item.create(title:       "My First Piece",
                             description: "Description",
                             price:       1,
@@ -19,12 +19,25 @@ RSpec.feature "User can remove item in cart", type: :feature do
     expect(current_path).to eq(store_path)
     click_link "Cart"
 
-    expect(page).to have_content(item.title)
-    fill_in "quantity", with: "2"
+    within "#cart-item-info" do
+      expect(page).to have_content(item.title)
+    end
+
+    within "#quantity-box" do
+      expect(page).to have_xpath("//input[@value='1']")
+    end
+
+    fill_in "quantity", with: 6
     click_on "Update"
 
     expect(current_path).to eq(cart_path)
-    expect(page).to have_content(item.title)
-    expect(page).to have_content("2")
+
+    within "#cart-item-info" do
+      expect(page).to have_content(item.title)
+    end
+
+    within "#quantity-box" do
+      expect(page).to have_xpath("//input[@value='6']")
+    end
   end
 end

@@ -61,7 +61,7 @@ RSpec.describe Cart, type: :model do
   end
 
   context "#update_item" do
-    it "changes quantity to item fromm cart" do
+    it "changes quantity to item from cart" do
       cart = Cart.new(nil)
 
       cart.add_item(item)
