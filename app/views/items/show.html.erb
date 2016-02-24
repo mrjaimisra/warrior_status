@@ -1,0 +1,8 @@
+<div class="row">
+  <div class="col s12">
+    <h4 id="item-title"><%= @item.title %></h4>
+    <p>
+      <%= @item.description %>
+      <%= button_to "Add to cart", cart_items_path(item_id: @item.id) %>
+  </div>
+</div>
