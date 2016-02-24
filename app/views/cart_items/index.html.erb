@@ -3,15 +3,15 @@
       <div class="notice"><%= flash[:notice] %></div>
     <% end %>
 <div class="row">
-  <div class="col-xs-6 col-xs-offset-3">
+  <div class="col s6 offset-s3">
   <% @cart_items.each do |i| %>
     <tr>
       <div class="well">
         <div class="row">
-          <div class="col-xs-8">
+          <div class="col s8">
             <td class ="title"> <%= i.title %>
           </div>
-          <div class="col-xs-4">
+          <div class="col s4">
             <td class ="quantity">Quantity: <%= i.quantity %>
           </div>
           <div class="input-field col s1">
