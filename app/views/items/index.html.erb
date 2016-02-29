@@ -11,7 +11,8 @@
 
   <div class="row">
     <% @items.map do |item| %>
-    <div class="col s4" style="background-image:url('<%= item.item_image.url(:medium) %>')">
+    <div class="col s4">
+      <%= image_tag item.item_image(:medium) %>
       <p><%= item.title %></p>
       <p><%= item.description %></p>
       <p><%= item.price %></p>
