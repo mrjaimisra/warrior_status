@@ -1,8 +1,9 @@
 <% if current_admin %>
   <div class="row">
 
-    <div class="col s3 offset-s10">
+    <div class="col s3 offset-s8">
       <%= link_to "Edit Item", edit_item_path(@item), class: "waves-effect waves-light btn black" %>
+      <%= link_to "Delete Item", item_path(@item), method: :delete, class: "waves-effect waves-light btn black" %>
     </div>
   </div>
 <% end %>

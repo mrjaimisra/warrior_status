@@ -8,7 +8,7 @@ Rails.application.routes.draw do
   get "/about",      to: "about#index"
   get "/store",      to: "items#index"
 
-  resources :items, only: [:new, :create, :show, :edit, :update]
+  resources :items, only: [:new, :create, :show, :edit, :update, :destroy]
 
   post "/cart_items", to: "cart_items#create"
   get "/cart",        to: "cart_items#index"
