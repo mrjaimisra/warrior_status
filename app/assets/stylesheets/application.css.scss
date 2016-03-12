@@ -108,3 +108,29 @@ body > nav > div > a.button-collapse > i {
 }
 
 /* Store Page */
+
+.items-container {
+  margin-left: 500px;
+}
+
+.item-info {
+  margin: 0.5em;
+  text-align: center;
+}
+
+.item-titles {
+  font-weight: bold;
+}
+
+.item-images {
+  display: block;
+  margin: 0 auto;
+  max-height: 100%;
+  max-width: 100%;
+}
+
+/* Item Page */
+
+.large-item-image {
+  margin-top: 1%;
+}
