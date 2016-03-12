@@ -8,15 +8,17 @@
     </div>
   </div>
 <% end %>
+</div>
 
   <div class="row">
-    <% @items.map do |item| %>
-    <div class="col s4">
-      <%= image_tag item.item_image(:medium) %>
-      <p><%= item.title %></p>
-      <p><%= item.description %></p>
-      <p><%= item.price %></p>
+    <div class="col s10 offset-s2">
+      <% @items.map do |item| %>
+      <div class="col s3 item-info">
+        <%= image_tag item.item_image(:medium), class: "item-images" %>
+        <h6 class="item-titles"><%= link_to item.title, item_path(item) %></h6>
+        <p><%= item.description %></p>
+        <p><%= number_to_currency(item.price) %></p>
+      </div>
+      <% end %>
     </div>
-    <% end %>
   </div>
-</div>
