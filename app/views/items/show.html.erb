@@ -1,3 +1,12 @@
+<% if current_admin %>
+  <div class="row">
+
+    <div class="col s3 offset-s10">
+      <%= link_to "Edit Item", edit_item_path(@item), class: "waves-effect waves-light btn black" %>
+    </div>
+  </div>
+<% end %>
+
 <div class="row">
   <div class="col s2 offset-s1">
     <h4 id="item-title"><%= @item.title %></h4>
