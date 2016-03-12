@@ -1,0 +1,50 @@
+<div class="container">
+  <%= render "shared/error_messages", object: @item %>
+
+  <div class="row">
+    <div class="col s12">
+      <h4 id="add-item-title">Edit Item Below</h4>
+    </div>
+  </div>
+
+  <%= form_for @item, multipart: true do |f| %>
+  <div class="row">
+    <div class="input-field col s12">
+      <%= f.label      :title %>
+      <%= f.text_field :title %>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="input-field col s12">
+      <%= f.label      :description %>
+      <%= f.text_area  :description, class: "materialize-textarea" %>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="input-field col s12">
+      <%= f.label      :price %>
+      <%= f.text_field :price %>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="input-field col s12">
+      <%= f.label      :item_image %>
+      <%= f.file_field :item_image %>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="input-field col s2">
+      <%= f.submit     "Update",
+                        class: "waves-effect waves-light btn black" %>
+    </div>
+  <% end %>
+    <div class="input-field col s2">
+      <%= link_to      "Cancel", item_path(@item),
+                        class: "waves-effect waves-light btn black" %>
+    </div>
+  </div>
+</div>

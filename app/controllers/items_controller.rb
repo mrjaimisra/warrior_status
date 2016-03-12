@@ -5,12 +5,12 @@ class ItemsController < ApplicationController
     @items = Item.all
   end
 
-  def new
-    @item = Item.new
-  end
-
   def show
     @item = Item.find(params[:id])
+  end
+
+  def new
+    @item = Item.new
   end
 
   def create
@@ -19,6 +19,19 @@ class ItemsController < ApplicationController
       redirect_to store_path
     else
       render :new
+    end
+  end
+
+  def edit
+    @item = Item.find_by(id: params[:id])
+  end
+
+  def update
+    @item = Item.find_by(id: params[:id])
+    if @item.update(item_params)
+      redirect_to item_path(@item)
+    else
+      render :edit
     end
   end
 
