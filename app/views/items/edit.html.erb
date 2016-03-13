@@ -31,6 +31,13 @@
 
   <div class="row">
     <div class="input-field col s12">
+      <%= f.collection_select :category_id, Category.all, :id, :name %>
+      <%= f.label             :category %>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="input-field col s12">
       <%= f.label      :item_image %>
       <%= f.file_field :item_image %>
     </div>
@@ -38,13 +45,13 @@
 
   <div class="row">
     <div class="input-field col s2">
-      <%= f.submit     "Update",
-                        class: "waves-effect waves-light btn black" %>
+      <%= f.submit "Update", class: "waves-effect waves-light btn black" %>
     </div>
   <% end %>
+
     <div class="input-field col s2">
-      <%= link_to      "Cancel", item_path(@item),
-                        class: "waves-effect waves-light btn black" %>
+      <%= link_to "Cancel",
+          item_path(@item), class: "waves-effect waves-light btn black" %>
     </div>
   </div>
 </div>

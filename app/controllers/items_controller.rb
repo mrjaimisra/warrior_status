@@ -16,7 +16,7 @@ class ItemsController < ApplicationController
   def create
     @item = Item.new(item_params)
     if @item.save
-      redirect_to store_path
+      redirect_to item_path(@item)
     else
       render :new
     end
@@ -44,6 +44,7 @@ class ItemsController < ApplicationController
   private
 
     def item_params
-      params.require(:item).permit(:title, :description, :price, :item_image)
+      params.require(:item).permit(:title, :description, :price, :category_id,
+                                   :item_image)
     end
 end

@@ -17,7 +17,7 @@
         <%= image_tag item.item_image(:medium), class: "item-images" %>
         <h6 class="item-titles"><%= link_to item.title, item_path(item) %></h6>
         <p><%= item.description %></p>
-        <p><%= number_to_currency(item.price) %></p>
+        <p><%= number_to_currency item.price %></p>
       </div>
       <% end %>
     </div>
