@@ -2,13 +2,16 @@ require 'rails_helper'
 
 RSpec.feature "Admin can", type: :feature do
   let!(:admin) { Admin.create(username: "Admin", password: "password") }
-  let!(:item)   { Item.create(title:       "My First Piece",
-                              description: "Something to be replaced",
-                              price:       1,
-                              item_image_file_name: "sun-rose-feather.jpg",
-                              item_image_content_type: "image/jpeg",
-                              item_image_file_size: 209772,
-                              item_image_updated_at: Date.new ) }
+  let!(:first_category) { Category.create(name: "Accessories") }
+  let!(:second_category) { Category.create(name: "Artwork") }
+  let!(:item)  { Item.create(title:       "My First Piece",
+                             description: "Something to be replaced",
+                             price:       1,
+                             category_id: first_category.id,
+                             item_image_file_name: "sun-rose-feather.jpg",
+                             item_image_content_type: "image/jpeg",
+                             item_image_file_size: 209772,
+                             item_image_updated_at: Date.new ) }
 
   before do
     login
@@ -18,10 +21,11 @@ RSpec.feature "Admin can", type: :feature do
     visit item_path(item)
     click_on "Edit Item"
 
-    fill_in "Title",          with: "My Second Item"
-    fill_in "Description",    with: "Best Piece Ever"
-    fill_in "Price",          with: 7
-    attach_file "Item image", File.expand_path('./app/assets/images/purple-parfletche-earrings.jpg')
+    fill_in "Title",             with: "My Second Item"
+    fill_in "Description",       with: "Best Piece Ever"
+    fill_in "Price",             with: 7
+    select second_category.name, from: "item[category_id]"
+    attach_file "Item image",    File.expand_path('./app/assets/images/purple-parfletche-earrings.jpg')
 
     click_on "Update"
 
