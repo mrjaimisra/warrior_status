@@ -11,8 +11,14 @@
 </div>
 
   <div class="row">
-    <div class="col s10 offset-s2">
-      <% @items.map do |item| %>
+    <% Category.all.each do |category| %>
+    <div class="category-container col s10 offset-s2" id='<%="#{category.name}"%>-container'>
+
+      <h3 class="category-titles">
+        <%= category.name %>
+      </h3>
+
+      <% category.items.map do |item| %>
       <div class="col s3 item-info">
         <%= image_tag item.item_image(:medium), class: "item-images" %>
         <h6 class="item-titles"><%= link_to item.title, item_path(item) %></h6>
@@ -20,5 +26,7 @@
         <p><%= number_to_currency item.price %></p>
       </div>
       <% end %>
+      <br>
     </div>
+    <% end %>
   </div>
