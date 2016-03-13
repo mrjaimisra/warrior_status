@@ -21,6 +21,8 @@ RSpec.feature "Admin can", type: :feature do
     visit item_path(item)
     click_on "Edit Item"
 
+    expect(current_path).to eq(edit_item_path(item))
+
     fill_in "Title",             with: "My Second Item"
     fill_in "Description",       with: "Best Piece Ever"
     fill_in "Price",             with: 7
@@ -30,10 +32,16 @@ RSpec.feature "Admin can", type: :feature do
     click_on "Update"
 
     expect(current_path).to eq(item_path(item))
-    expect(page).to have_content("My Second Item")
-    expect(page).to have_content("Best Piece Ever")
-    expect(page).to_not have_content(item.title)
-    expect(page).to_not have_content(item.description)
+
+    within(".item-info-box") do
+      expect(page).to have_content("My Second Item")
+      expect(page).to have_content("Best Piece Ever")
+      expect(page).to have_content(7)
+      expect(page).to have_content("Artwork")
+      expect(page).to_not have_content(item.title)
+      expect(page).to_not have_content(item.description)
+      expect(page).to_not have_content(item.category.name)
+    end
   end
 
   scenario "not edit an existing item if form fields are blank" do

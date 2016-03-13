@@ -31,11 +31,18 @@ RSpec.feature "Admin can", type: :feature do
     attach_file "Item image",  File.expand_path('./app/assets/images/purple-parfletche-earrings.jpg')
 
     click_on "Add Item"
+    new_item = Item.last
 
-    expect(current_path).to eq(store_path)
+    expect(current_path).to eq(item_path(new_item))
     expect(page).to have_content("My First Item")
     expect(page).to have_content("A great piece")
-    #TODO add test to verify all item data is on show page
+
+    visit(item_path(new_item))
+
+    within(".item-info-box") do
+      expect(page).to have_content(8)
+      expect(page).to have_content("Accessories")
+    end
   end
 
   scenario "not add a new item form fields are blank" do
