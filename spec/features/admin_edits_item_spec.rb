@@ -27,7 +27,7 @@ RSpec.feature "Admin can", type: :feature do
     fill_in "Description",       with: "Best Piece Ever"
     fill_in "Price",             with: 7
     select second_category.name, from: "item[category_id]"
-    attach_file "Item image",    File.expand_path('./app/assets/images/purple-parfletche-earrings.jpg')
+    attach_file "item_item_image",    File.expand_path('./app/assets/images/purple-parfletche-earrings.jpg')
 
     click_on "Update"
 
@@ -51,7 +51,6 @@ RSpec.feature "Admin can", type: :feature do
     fill_in "Title",          with: ""
     fill_in "Description",    with: ""
     fill_in "Price",          with: ""
-    # attach_file "Item image", ""
 
     click_on "Update"
 
@@ -66,7 +65,7 @@ RSpec.feature "Admin can", type: :feature do
     click_on "Edit Item"
 
     fill_in "Price",          with: "eight"
-    attach_file "Item image", File.expand_path('./app/assets/images/purple-parfletche-earrings.pdf')
+    attach_file "item_item_image", File.expand_path('./app/assets/images/purple-parfletche-earrings.pdf')
 
     click_on "Update"
 
