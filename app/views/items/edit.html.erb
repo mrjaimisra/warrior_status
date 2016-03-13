@@ -38,11 +38,19 @@
 
   <div class="row">
     <div class="input-field col s12">
-      <%= f.label      :item_image %>
-      <%= f.file_field :item_image %>
+      <div class="file-field input-field">
+        <div class="btn">
+          <span>Upload Image</span>
+          <input type="file">
+        </div>
+        <div class="file-path-wrapper">
+          <%= f.file_field :item_image %>
+          <input class="file-path validate" type="text">
+        </div>
+      </div>
     </div>
   </div>
-
+  
   <div class="row">
     <div class="input-field col s2">
       <%= f.submit "Update", class: "waves-effect waves-light btn black" %>

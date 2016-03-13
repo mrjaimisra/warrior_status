@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
-  root "main#index"
-
+  root "items#index"
+  
   get  "/admin",     to: "sessions#new"
   post "/admin",     to: "sessions#create"
   delete "/logout",  to: "sessions#destroy"

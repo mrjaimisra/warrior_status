@@ -28,7 +28,7 @@ RSpec.feature "Admin can", type: :feature do
     fill_in "Description", with: "A great piece"
     fill_in "Price",       with: 8
     select "Accessories",  from: "item[category_id]"
-    attach_file "Item image",  File.expand_path('./app/assets/images/purple-parfletche-earrings.jpg')
+    attach_file "item_item_image",  File.expand_path('./app/assets/images/purple-parfletche-earrings.jpg')
 
     click_on "Add Item"
     new_item = Item.last
@@ -63,7 +63,7 @@ RSpec.feature "Admin can", type: :feature do
     fill_in "Title",          with: "My First Item"
     fill_in "Description",    with: "A great piece"
     fill_in "Price",          with: "eight"
-    attach_file "Item image", File.expand_path('./app/assets/images/purple-parfletche-earrings.pdf')
+    attach_file "item_item_image", File.expand_path('./app/assets/images/purple-parfletche-earrings.pdf')
 
     click_on "Add Item"
 
