@@ -9,6 +9,8 @@ class CartItemsController < ApplicationController
 
   def index
     @cart_items = cart.items
+    @subtotal = cart.total
+    session[:subtotal] = @subtotal
   end
 
   def destroy
@@ -29,5 +31,4 @@ class CartItemsController < ApplicationController
   def count
     cart.data.keys.count
   end
-
 end
