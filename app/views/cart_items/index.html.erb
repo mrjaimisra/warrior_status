@@ -29,16 +29,26 @@
               <%= form_tag cart_items_path, method: :put do %>
               <%= hidden_field_tag :item_id, i.id %>
               <%= number_field_tag 'quantity', i.quantity, within: 1...10 %>
+              <%= submit_tag "Update", class: "waves-effect waves-teal btn" %>
             </td>
             <td>
-              <%= submit_tag "Update", class: "waves-effect waves-teal btn" %></td>
+            </td>
               <% end %>
             <td class="Remove"><%= link_to "Remove", cart_items_path(item_id: i.id), method: :delete%></td>
           </tr>
         </tbody>
-
         <% end %>
       </table>
     </div>
   </div>
+
+  <div class="row">
+    <div class="col s6">
+      Total: <%= number_to_currency @subtotal %>
+    </div>
+    <div class="col s6">
+      <%= link_to "Checkout", new_charge_path, class: "btn" %>
+    </div>
+  </div>
+
 </div>
