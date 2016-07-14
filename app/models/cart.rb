@@ -24,4 +24,12 @@ class Cart
   def update_item(item_id, quantity)
     data[item_id.to_s] = quantity.to_i
   end
+
+  def total
+    prices = items.map do |i|
+      i.price * i.quantity
+    end
+
+    prices.reduce(:+)
+  end
 end

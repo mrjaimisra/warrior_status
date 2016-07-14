@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
   root "items#index"
-  
+
   get  "/admin",     to: "sessions#new"
   post "/admin",     to: "sessions#create"
   delete "/logout",  to: "sessions#destroy"
@@ -14,4 +14,6 @@ Rails.application.routes.draw do
   get "/cart",        to: "cart_items#index"
   delete '/cart_items', to: "cart_items#destroy"
   put '/cart_items', to: "cart_items#update"
+
+  resources :charges
 end
